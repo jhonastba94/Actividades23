@@ -1,0 +1,20 @@
+<h2 class="text-center">Iniciar sesion</h2>
+<section class="container-sm">
+  <section class="col-3">
+    <section class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" class="form-control" id="username">
+    </section>
+    <section class="form-group">
+      <label for="password">Password:</label>
+      <input type="text" class="form-control" id="password">
+    </section>
+    <button (click)="login()" value="Log in" mat-raised-button color="primary">Enviar</button>
+      <div class="example-container m-1">
+        <mat-form-field appearance="fill">
+          <mat-label>Enter your password</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
